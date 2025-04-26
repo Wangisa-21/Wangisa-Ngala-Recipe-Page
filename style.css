@@ -1,0 +1,171 @@
+/* ===== BASE STYLES ===== */
+body {
+    font-family: 'Outfit', sans-serif;
+    background-color: #F9F5F0;
+    color: #5A4A42;
+    line-height: 1.5;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  /* ===== RECIPE CARD ===== */
+  .recipe-card {
+    background: white;
+    max-width: 600px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px; /* Space for attribution */
+  }
+
+  #image-omelette {
+    padding: 25px 25px 0 25px; /* Top padding only for desktop */
+  }
+  
+  /* ===== IMAGE ===== */
+  #image-omelette img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 15px;
+    
+  }
+  
+  /* ===== CONTENT CONTAINER ===== */
+  .card-content {
+    padding: 30px;
+  }
+  
+  /* ===== TYPOGRAPHY ===== */
+  h1 {
+    font-family: 'Young Serif', serif;
+    color: #3A2E28;
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
+  
+  h2 {
+    font-family: 'Young Serif', serif;
+    color: #8B5A2B;
+    font-size: 1.5rem;
+    margin: 15px 0;
+  }
+  
+  h3 {
+    color: #7D4F50;
+    font-size: 1.2rem;
+  }
+  
+  /* ===== PREPARATION TIME ===== */
+  #preparation-time {
+    background-color: #FFF5F7;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+  }
+  
+  #preparation-time ul {
+    padding-left: 20px;
+  }
+  
+  /* ===== LISTS ===== */
+  ul, ol {
+    padding-left: 25px;
+  }
+  
+  li {
+    margin-bottom: 10px;
+    padding-left: 15px;
+  }
+  
+  /* ===== SECTION DIVIDERS ===== */
+
+  #ingredients {
+    border-bottom: 1px solid #E0D7D1;
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+  }
+  #instructions {
+    border-bottom: 1px solid #E0D7D1; /* NEW: Adds border below instructions */
+    padding-bottom: 25px; /* NEW: Adds spacing */
+    margin-bottom: 25px; /* NEW: Adds spacing */
+  }
+  
+  /* ===== NUTRITION SECTION ===== */
+.nutrients {
+    padding-bottom: 25px;
+  }
+  
+  .nutrients div {
+    display: grid;
+    grid-template-columns: 1fr 120px; /* Fixed gap width */
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #E0D7D1;
+  }
+  
+  .nutrients div:last-child {
+    border-bottom: none;
+  }
+  
+  .nutrients p {
+    margin: 0;
+    padding-left: 32px; /* Indent labels */
+  }
+  
+  .nutrients b {
+    color: #A86B3F;
+    font-weight: 600;
+    text-align: right;
+    padding-right: 20px; /* Right padding for values */
+  }
+  
+  /* ===== ATTRIBUTION ===== */
+  .attribution {
+    font-size: 11px;
+    text-align: center;
+    width: 100%;
+    max-width: 600px;
+    padding: 10px;
+    color: #5A4A42;
+  }
+  
+  .attribution a {
+    color: #8B5A2B;
+  }
+  
+  /* ===== DESKTOP VIEW ===== */
+@media (min-width: 601px) {
+    .recipe-card {
+      max-width: 650px; /* Slightly larger to account for padding */
+    }
+    
+    #image-omelette {
+      padding: 30px 30px 0 30px; /* More padding on desktop */
+    }
+    
+    #image-omelette img {
+      border-radius: 12px 12px 12px 12px; /* Only round top corners */
+    }
+  }
+
+  /* ===== MOBILE VIEW ===== */
+  @media (max-width: 600px) {
+    body {
+      padding: 0;
+      background: white;
+    }
+  
+    .recipe-card {
+      border-radius: 0;
+      box-shadow: none;
+      margin-bottom: 0;
+    }
+    
+    .attribution {
+      padding: 20px 10px;
+    }
+  }

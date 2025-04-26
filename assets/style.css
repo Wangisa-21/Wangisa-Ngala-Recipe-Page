@@ -1,0 +1,94 @@
+/* ===== BASE STRUCTURE ===== */
+body {
+    font-family: 'Outfit', sans-serif;
+    background-color: #F9F5F0;
+    color: #5A4A42;
+    line-height: 1.5;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* MAIN CARD CONTAINER */
+  .recipe-card {
+    background: white;
+    max-width: 600px;
+    border-radius: 15px;
+    overflow: hidden; /* Ensures image corners match card */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+  }
+  
+  /* IMAGE - FULL WIDTH INSIDE CARD */
+  #image-omelette {
+    width: 90%;
+    padding: 10px;
+    margin: 0;
+  }
+  
+  #image-omelette img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  /* CONTENT SECTIONS */
+  .card-content {
+    padding: 30px;
+  }
+  
+  /* SECTION DIVIDERS */
+  .section-divider {
+    height: 1px;
+    background: #E0D7D1;
+    margin: 25px 0;
+    border-bottom: 1px solid #dbc8bb;
+  }
+  
+  /* PREPARATION TIME BOX */
+  #preparation-time {
+    background: #FFF5F7;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+  }
+  
+/* Add bottom border to Ingredients section */
+#ingredients {
+    border-bottom: 1px solid #E0D7D1; /* Light beige divider */
+    padding-bottom: 25px; /* Add space below content */
+    margin-bottom: 25px; /* Space before next section */
+    
+  }
+
+  /* Add bottom border to Nutrition section */
+.nutrients {
+    border-bottom: 1px solid #E0D7D1;
+    padding-bottom: 25px;
+  }
+
+  /* Remove the last divider (since Nutrition is now the last section) */
+.nutrients ~ .section-divider {
+    display: none;
+  }
+
+  /* NUTRITION TABLE */
+  .nutrients div {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #dbc8bb;
+  }
+  
+  /* ===== RESPONSIVE ADJUSTMENTS ===== */
+  @media (max-width: 600px) {
+    body {
+      padding: 0;
+      background: white;
+    }
+    
+    .recipe-card {
+      border-radius: 0;
+      box-shadow: none;
+    }
+  }
